@@ -92,14 +92,14 @@ primary_branch: main
 #  repo: fluidd-core/fluidd
 #  path: ~/fluidd
 
-[update_manager klipper-backup]
-type: git_repo
-path: ~/klipper-backup
-origin: https://github.com/Staubgeborener/klipper-backup.git
-managed_services: klipper
-primary_branch: main
+# [update_manager klipper-backup]
+# type: git_repo
+# path: ~/klipper-backup
+# origin: https://github.com/Staubgeborener/klipper-backup.git
+# managed_services: klipper
+# primary_branch: main
 
-# [include octoeverywhere-system.cfg]
+[include octoeverywhere-system.cfg]
 
 [power homeassistant_switch]
 type: homeassistant
@@ -111,11 +111,3 @@ domain: switch
 on_when_job_queued: True
 restart_klipper_when_powered: True
 
-
-# Crowsnest update_manager entry
-[update_manager crowsnest]
-type: git_repo
-path: ~/crowsnest
-origin: https://github.com/mainsail-crew/crowsnest.git
-managed_services: crowsnest
-install_script: tools/pkglist.sh
